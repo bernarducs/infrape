@@ -12,6 +12,9 @@ app = dash.Dash(
     suppress_callback_exceptions=True,
     external_stylesheets=[dbc.themes.LUX])
 
+# para producao
+# server = app.server
+
 app.layout = html.Div([
     infra_assets.navbar,
     dbc.Container([
@@ -81,3 +84,5 @@ map_callbacks(app)
 
 if __name__ == '__main__':
     app.run_server("127.0.0.1", port=5000, debug=True)
+    # para producao
+    # server.run('0.0.0.0')
